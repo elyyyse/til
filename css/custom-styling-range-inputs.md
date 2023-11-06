@@ -8,11 +8,13 @@ input[type='range'] {
 }
 
 input[type='range']::-moz-range-thumb {
-    -webkit-appearance: none;
     /* sTyLe it up */
 }
 
 input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -16px; /* May need some neg margin-top to
+                        re-center the thumb  */
     /* StYlE it up */
 }
 
