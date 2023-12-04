@@ -1,0 +1,36 @@
+input[type='checkbox'] {
+  /* Visually Hidden styles from the A11y Project  
+  https://www.a11yproject.com/posts/how-to-hide-content/ */
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+}
+
+input[type='checkbox'] + label::before {
+  content: '';
+  /* STYLE YOUR CUSTOM CHECKBOX HERE */
+}
+
+@media (hover: hover) and (pointer: fine) {
+  input[type='checkbox']:hover + label::before {
+    /* STYLE YOUR HOVER STATE HERE */
+  }
+}
+
+input[type='checkbox']:focus-visible + label::before {
+  outline: auto; /* or preferred design */
+}
+
+input[type='checkbox']:checked + label::before {
+  /* STYLE YOUR CHECKED STATE HERE */
+}
+
+input[type='checkbox']:checked + label {
+  /* optional checked state styles for the label itself */
+  color: var(--greyed-out);
+  text-decoration: line-through;
+}
