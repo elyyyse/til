@@ -1,18 +1,19 @@
 input[type='radio'] {
   width: 0;
   height: 0;
+  cursor: pointer;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .filter-option:hover {
+  input[type='radio'] + label:hover {
     cursor: pointer;
     /* STYLES GO HERE */
   }
 }
 
-.filter-option:focus + label {
+input[type='radio']:focus + label {
   outline: auto;
 }
-.filter-option:checked + label {
+input[type='radio']:checked + label {
   /* STYLES GO HERE */
 }
